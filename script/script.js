@@ -1,8 +1,11 @@
 
 
 document.querySelector(".col-span-1").addEventListener("click", function () {
-    window.location.href = "main.html"; // Redirect to main.html
+    window.location.href = "main.html";
 });
+
+
+
 
 
 function updateNumbers(cardNumber) {
@@ -31,6 +34,7 @@ function updateNumbers(cardNumber) {
 
 
 
+
 function clearHistory() {
     let historyBox = document.getElementById("history");
     if (historyBox) {
@@ -38,18 +42,7 @@ function clearHistory() {
     } else {
         console.error("history invalid");
     }
-}
+ } 
 
-
-// Select the paragraph where the date will be displayed
-//let dateElement = document.querySelector(".text-2xl");
-
-// Get today's date
-//let today = new Date();
-
-// Format the date (e.g., "Wed, Jul 28 2025")
-//let options = { weekday: "short", month: "short", day: "numeric", year: "numeric" };
-//let formattedDate = today.toLocaleDateString("en-US", options);
-
-// Update the text content with today's date
-//dateElement.innerHTML = `${formattedDate.split(',')[0]} ,<br> <span class="font-bold">${formattedDate.split(',')[1]}</span>`;
+   
+ 
