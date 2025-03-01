@@ -19,7 +19,7 @@
                 <button class="px-5 py-2 flex items-center gap-2 rounded-2xl
                  bg-slate-100">
                      <img src="/assets/checkbox.png" alt="">
-                    <p class="text-2xl font-bold">24</p>
+                    <p id="card24" class="text-2xl font-bold">24</p>
 
                 </button>
 
@@ -43,7 +43,7 @@
            <div>
            <p class="text-xl">Task Assigned
             <br>
-            <span class="font-bold text-2xl">6</span>
+            <span id = "card6" class="font-bold text-2xl">6</span>
            </p>
           
            </div>
@@ -88,7 +88,7 @@
            <h2 class="font-[500px] text-[20px]">21 March 2025</h2>
            </div>
            <button class="bg-blue-500 text-white px-4 py-1
-           rounded-xl">Completed</button>
+           rounded-xl" onclick= "updateNumbers(1)">Completed</button>
            </div>
          </div>
 
@@ -103,7 +103,7 @@
             <h2 class="font-[500px] text-[20px]">21 March 2025</h2>
             </div>
             <button class="bg-blue-500 text-white px-4 py-1
-            rounded-xl">Completed</button>
+            rounded-xl" onclick= "updateNumbers(2)">Completed</button>
             </div>
           </div>
 
@@ -118,7 +118,7 @@
             <h2 class="font-[500px] text-[20px]">21 March 2025</h2>
             </div>
             <button class="bg-blue-500 text-white px-4 py-1
-            rounded-xl">Completed</button>
+            rounded-xl" onclick= "updateNumbers(3)">Completed</button>
             </div>
           </div>
 
@@ -133,7 +133,7 @@
             <h2 class="font-[500px] text-[20px]">21 March 2025</h2>
             </div>
             <button class="bg-blue-500 text-white px-4 py-1
-            rounded-xl">Completed</button>
+            rounded-xl" onclick= "updateNumbers(4)">Completed</button>
             </div>
           </div>
 
@@ -148,7 +148,7 @@
             <h2 class="font-[500px] text-[20px]">21 March 2025</h2>
             </div>
             <button class="bg-blue-500 text-white px-4 py-1
-            rounded-xl">Completed</button>
+            rounded-xl" onclick= "updateNumbers(5)">Completed</button>
             </div>
           </div>
 
@@ -163,7 +163,7 @@
             <h2 class="font-[500px] text-[20px]">21 March 2025</h2>
             </div>
             <button class="bg-blue-500 text-white px-4 py-1
-            rounded-xl">Completed</button>
+            rounded-xl" onclick= "updateNumbers(6)">Completed</button>
             </div>
           </div>
 
@@ -182,14 +182,21 @@
         </div>
         <h1 class="text-[#00303C] text-xl">Activity Log</h1> 
         </div>
-        <div class="flex justify-center mt-4">
-    <button class="bg-blue-500 text-white
-    px-4 py-2 rounded-xl">Clear History</button>
+       
+
+      
+         <div class="text-center mt-4">
+    <button class="bg-blue-500 text-white 
+    px-4 py-2 rounded-xl"onclick="clearHistory()">Clear History</button>
+    </div>
+
+    <div id="history" class="mt-4 p-4 shadow-md bg-slate-100 "></div>
         </div>
-      </div>
+      
 
 
    </section>
    </main>
+   <script src="./script/script.js"></script>
 </body>
 </html>     
