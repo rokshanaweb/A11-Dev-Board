@@ -1,6 +1,6 @@
 
 
-document.querySelector(".col-span-1").addEventListener("click", function () {
+document.querySelector(".col-span-2").addEventListener("click", function () {
     window.location.href = "main.html";
 });
 
