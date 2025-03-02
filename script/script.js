@@ -7,32 +7,44 @@ document.querySelector(".col-span-2").addEventListener("click", function () {
 
 
 
+const card6 = document.getElementById('card6');
+let convertedCard6 = parseInt(card6.innerText);
 
-function updateNumbers(cardNumber) {
-    let card6 = document.getElementById("card6");
-    let card24 = document.getElementById("card24");
-    let historyBox = document.getElementById("history");
 
-    let num6 = parseInt(card6.textContent);
-    let num24 = parseInt(card24.textContent);
+const cmButton = document.querySelectorAll(".cm-button");
 
-    if (num6 > 0) {
-        card6.textContent = num6 - 1;
-        card24.textContent = num24 + 1;
+for (const button of cmButton) {
+         
+    button.addEventListener("click", function () {
+        alert ('Board Updated successfully')
 
-       
-        let log = document.createElement("p");
-        log.className = "text-[20px] p-1 ";
-        log.textContent = `you Have completed the task at 1:34:34 Am`;
-        historyBox.appendChild(log);
+        if (convertedCard6 > 0){
+            convertedCard6 -= 1;
+            card6.innerText = convertedCard6;
+        }
+        const card24 = document.getElementById('card24');
+        let convertedCard24 = parseInt(card24.innerText);
+        convertedCard24 += 1;
+        card24.innerText = convertedCard24;
 
-        
-     
-        alert(`Board Updated successfully`);
-    }
+        if (convertedCard6 === 0) {
+            alert('congrats! you completed all the current task')
+        }
+
+        const title = this.closest('.cards').querySelector('.title')
+        const history = document.getElementById('history')
+
+        const p = document.createElement('p')
+        p.classList.add('mt-4', 'p-4', 'shadow-md', 'bg-slate-100')
+
+        p.innerText = `You have completed the task ${title.innerText} ${new Date().toLocaleTimeString()}`
+              history.appendChild(p)
+
+              this.setAttribute('disabled', 'true')
+              this.classList.remove('bg-blue-500')
+              this.classList.add('bg-gray-400')
+    })
 }
-
-
 
 
 function clearHistory() {
